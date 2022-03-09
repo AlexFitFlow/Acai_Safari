@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-Order</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-color: black;">
+    <div class="Whole" style="margin: auto;">
+        <!-- Top Header -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="padding: 10px; width: 976px; margin-left: 12px;">
+            <div class="d-flex justify-content-around">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'images/logo8.jpg' %}" style="border-radius: 5px;" width="170" height="40" class="d-inline-block align-top">
+                </a>
+                <a href="/order_page" style="margin: 10px;"><button class="btn btn-success" type="button">Order Now</button></a>
+                <a href="/account" style="margin: 10px;"><button class="btn btn-success" type="button">Account</button></a>
+                <a href="/contact_page" style="margin: 10px;"><button class="btn btn-success" type="button">Contact Us</button></a>
+                <a href="/story_page" style="margin: 10px;"><button class="btn btn-success" type="button">Our Story</button></a>
+            </div>
+        </nav><br><br>
+
+        <h1 style="margin-left: 170px;">Select From A Previous Order!</h1><br><br>
+        <!-- Previous Orders with Order Again Feature -->
+        <table class="table table-striped table-dark" style="margin-left: 124px; width: 750px;">
+            <tr>
+                <th>Order Number</th>
+                <th>Amount</th>
+                <th>Bowl</th>
+                <th></th>
+            </tr>
+        {% for order in user_orders  %}
+        <tr>
+            <td>{{order.id}}</td>
+            <td>${{order.amount}}</td>
+            <td>
+                <p>Method {{order.acai.method}}</p>
+                <p>Size {{order.acai.size}}</p>
+                <p>Base {{order.acai.base}}</p>
+                <p>Quantity {{order.acai.quantity}}</p>
+                <p>Toppings {{order.acai.toppings}}</p>
+                <p>Beverage {{order.acai.beverage}}</p>
+            </td>
+            <td><a href="order_again/{{order.id}}"> <button class="btn btn-success">Order Again?</button></a></td>
+        </tr>
+        {% endfor %}
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-color: black;">
+    <div class="Whole" style="margin: auto; height: 900px;">
+        <!-- Top Header -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="padding: 10px; width: 976px; margin-left: 12px;">
+            <div class="d-flex justify-content-around">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'images/logo8.jpg' %}" style="border-radius: 5px;" width="170" height="40" class="d-inline-block align-top">
+                </a>
+                <a href="/" style="margin: 10px;"><button class="btn btn-success" type="button">Main</button></a>
+                <a href="/account" style="margin: 10px;"><button class="btn btn-success" type="button">Account</button></a>
+                <a href="/contact_page" style="margin: 10px;"><button class="btn btn-success" type="button">Contact Us</button></a>
+                <a href="/story_page" style="margin: 10px;"><button class="btn btn-success" type="button">Our Story</button></a>
+            </div>
+        </nav><br>
+        <!-- Three Bowl Options -->
+        <h1 class="Header"><b style="margin-left: 70px;">Order Your Acai Bowl Today!</b></h1><br>
+        <div class="card-group" style="border: 5px solid; width: 750px; margin-left: 124px;">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'images/bar4.jpg' %}" width="200px" height="300px" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text" style="font-family: comic sans MS">Order your bowl with a choice of a multitude of toppings
+                        (Start with your size, base, toppings and maybe a drink!)</p>
+                    <a href="/build"><button class="btn btn-primary btn-lg">New Order</button> </a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'images/Acai_Bowl3.jpg' %}" width="200px" height="300px" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text" style="font-family: comic sans MS">Re-order a previous order<br>
+                        (Did you enjoy a past order? If so, then select from a previous purchase)</p>
+                    <a href="/re_order"><button style="margin-top: 20px;" class="btn btn-primary btn-lg" type="submit">Re-Order</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'images/bar6.jpg' %}" width="200px" height="300px" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text" style="font-family: comic sans MS">Feeling lucky? Lets build a random order
+                        (A random bowl will be created)</p>
+                    <a href="/surprise"><button style="margin-top: 20px;" class="btn btn-primary btn-lg" type="submit">Surprise Me</button></a> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

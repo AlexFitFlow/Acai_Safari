@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-color: black;">
+    <div class="Whole" style="margin: auto">
+        <!-- Top Header -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="padding: 10px; width: 976px; margin-left: 12px;">
+            <div class="d-flex justify-content-around">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'images/logo8.jpg' %}" style="border-radius: 5px;" width="170" height="40" class="d-inline-block align-top">
+                </a>
+                <a href="/order_page" style="margin: 10px;"><button class="btn btn-success" type="button">Order Now</button></a>
+                <a href="/login_page" style="margin: 10px;"><button class="btn btn-success" type="button">Register/Login</button></a>
+                <a href="/" style="margin: 10px;"><button class="btn btn-success" type="button">Main</button></a>
+                <a href="/story_page" style="margin: 10px;"><button class="btn btn-success" type="button">Our Story</button></a>
+            </div>
+        </nav><br><br>
+        <!-- Contact Info -->
+        <div class="contact_info">
+            <div class="card border-dark mb-3" style="max-width: 21rem; margin-left: 120px;">
+                <div class="card-header" style="font-family: comic sans MS">Acai Safari Cafe</div>
+                <div class="card-body text-dark" style="font-family: comic sans MS">
+                    <h5 class="card-title">(818) 123-4567</h5>
+                    <p>3900 West Riverside Drive, Burbank, CA</p>
+                    <p>Monday – Sunday: 10AM – 8PM</p>
+                    <p>AcaiSafari@icloud.com</p>
+                </div>
+            </div>
+        </div><br><br>
+
+        <img style="border-radius: 15px; margin-left: 175px;" class="store" src="{% static 'images/Cafe.jpg' %}" width="650px" alt="store"><br><br><br><br>
+        <!-- Bottom Header -->
+        <div class="Social_Media" style="margin-left: 440px;">
+            <p>
+            <a href="https://www.instagram.com"><img src="{% static 'images/instagram_logo.jpg' %}" style="border-radius: 20px;" width="50px" alt="instagram"></a>
+            <a href="https://www.facebook.com"><img src="{% static 'images/facebook_logo.jpg' %}" style="border-radius: 10px;" width="50px" alt="facebook"></a>
+            <a href="https://www.yelp.com"><img src="{% static 'images/yelp_logo.jpg' %}" width="50px" alt="yelp"></a>
+            </p>
+        </div>
+        <p style="margin-left: 450px; font-family: comic sans MS" >© Acai Safari 2022</p><br>
+    </div>
+</body>
+</html>

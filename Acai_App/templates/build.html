@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Acai</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-color: black;">
+    <div class="Whole" style="margin: auto;">
+        <!-- Top Header -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="padding: 10px; width: 976px; margin-left: 12px;">
+            <div class="d-flex justify-content-around">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'images/logo8.jpg' %}" style="border-radius: 5px;" width="170" height="40" class="d-inline-block align-top">
+                </a>
+                <a href="/order_page" style="margin: 10px;"><button class="btn btn-success" type="button">Order Now</button></a>
+                <a href="/account" style="margin: 10px;"><button class="btn btn-success" type="button">Account</button></a>
+                <a href="/contact_page" style="margin: 10px;"><button class="btn btn-success" type="button">Contact Us</button></a>
+                <a href="/story_page" style="margin: 10px;"><button class="btn btn-success" type="button">Our Story</button></a>
+            </div>
+        </nav><br>
+
+        <div class="craft">
+            <img src="{% static 'images/craft.jpg' %}" style="border-radius: 15px;" width="200px" alt="Craft-A-Acai">
+        </div><br>
+
+        <!-- Create New Bowl -->
+        <form action='/create_bowl' class="bowl_create" method="POST">
+            {% csrf_token %}
+            <b>Method:</b>
+            <select class="form-row align-items-center" style="width: 300px;" name='method'>
+                <option value='Delivery'>Delivery</option>
+                <option value='Carry Out'>Carry Out</option>
+            </select><br>
+            <b>Size:</b>
+            <select class="form-row align-items-center" style="width: 300px;" name='size'>
+                <option value='Small'>Small</option>
+                <option value='Medium'>Medium</option>
+                <option value='Large'>Large</option>
+            </select><br>
+            <b>Base:</b>
+            <select class="form-row align-items-center" style="width: 300px;" name='base'>
+                <option value='Acai'>Acai</option>
+                <option value='Papaya'>Papaya</option>
+            </select><br>
+            <b>Quantity:</b>
+            <select class="form-row align-items-center" style="width: 300px;" name='quantity'>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+            </select><br>
+            <b>Topping:</b><br>
+            <div class="topping">
+                <div class="toppings">
+                    <input type="checkbox" name="Blueberry" value="Blueberry">
+                    <label for="1">Blueberry</label><br>
+                    <input type="checkbox" name="Strawberry" value="Strawberry">
+                    <label for="2">Strawberry</label><br>
+                    <input type="checkbox" name="Honey" value="Honey">
+                    <label for="3">Honey</label>
+                </div>
+                <div class="toppings">
+                    <input type="checkbox" name="Chia Seeds" value="Chia Seeds">
+                    <label for="4">Chia Seeds</label><br>
+                    <input type="checkbox" name="Banana" value="Banana">
+                    <label for="5">Banana</label><br>
+                    <input type="checkbox" name="Almond Butter" value="Almond Butter">
+                    <label for="6">Almond Butter</label>
+                </div>
+                <div class="toppings">
+                    <input type="checkbox" name="Peanut Butter" value="Peanut Butter">
+                    <label for="7">Peanut Butter</label><br>
+                    <input type="checkbox" name="Chocolate chunks" value="Chocolate chunks">
+                    <label for="8">Chocolate Chunks</label><br>
+                    <input type="checkbox" name="Caramel syrup" value="Caramel syrup">
+                    <label for="9">Caramel syrup</label>
+                </div>
+            </div><br>
+            <b>Drinks(optional):</b>
+            <div class="drinks">
+                <select class="form-row align-items-center" style="width: 300px;" name='beverage'>
+                    <option value='None'>None</option>
+                    <option value='Bottled Water'>Bottled Water $2</option>
+                    <option value='Yerba Mate'>Yerba Mate $3</option>
+                    <option value='Matcha Tea'>Matcha Tea $3</option>
+                    <option value='Sparkling Water'>Sparkling Water $4</option>
+                    <option value='Kombucha'>Kombucha $5</option>
+                </select><br>                
+            </div>
+            <br><input class="btn btn-primary btn-lg" style="width: 300px;" type='submit'>
+        </form><br>
+    </div>
+</body>
+</html>

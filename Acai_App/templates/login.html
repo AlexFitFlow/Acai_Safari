@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-color: black;">
+    <div class="Whole"  style="margin: auto; height: 900px;">
+        <!-- Top Header -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="padding: 10px; width: 976px; margin-left: 12px;">
+            <div class="d-flex justify-content-around">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'images/logo8.jpg' %}" style="border-radius: 5px;" width="170" height="40" class="d-inline-block align-top">
+                </a>
+                <a href="/order_page" style="margin: 10px;"><button class="btn btn-success" type="button">Order Now</button></a>
+                <a href="/" style="margin: 10px;"><button class="btn btn-success" type="button">Main</button></a>
+                <a href="/contact_page" style="margin: 10px;"><button class="btn btn-success" type="button">Contact Us</button></a>
+                <a href="/story_page" style="margin: 10px;"><button class="btn btn-success" type="button">Our Story</button></a>
+            </div>
+        </nav><br>
+        <!-- Register And Login -->
+        <div class="Base"><br>
+            <h1>Please Register Or Login!</h1>
+            <ul>
+            {% for message in messages %}
+                <li>{{message}}</li>
+            {% endfor %}
+            </ul>
+            <h3>Register:</h3>
+            <form action='/register' method="POST">
+                {% csrf_token %}
+                <input type='text' class="form-control" placeholder="First Name" style="width: 300px;" name='first_name'>
+                <input type='text' class="form-control" placeholder="Last Name" style="width: 300px;" name='last_name'>
+                <input type='email' class="form-control" placeholder="Email Name" style="width: 300px;" name='email'>
+                <input type='address' class="form-control" placeholder="Address" style="width: 300px;" name='address'>
+                <input type='city' class="form-control" placeholder="City" style="width: 300px;" name='city'>
+                <input type='password' class="form-control" placeholder="Password" style="width: 300px;" name='password'>
+                <input type='password' class="form-control" placeholder="Confirm Password" style="width: 300px;" name='confirm_password'>
+                <input class="btn btn-primary btn-lg" style="width: 300px;" type='submit'>
+            </form><br>
+            <h3>Welcome Back!</h3>
+            <form action='/login' method="POST">
+                {% csrf_token %}
+                <input type='email' class="form-control" placeholder="Email" style="width: 300px;" name='email'>
+                <input type='password' class="form-control" placeholder="Password" style="width: 300px;" name='password'><br>
+                <input class="btn btn-primary btn-lg" style="width: 300px;" type='submit'>
+            </form><br><br><br>
+        </div>
+    </div>
+</body>
+</html>

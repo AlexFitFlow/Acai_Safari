@@ -1,0 +1,70 @@
+
+.Whole {
+    width: 1000px;
+    /* background-color:rgba(218,207,185,255); */
+    background: url("/static/images/back.jpg")50% 0 no-repeat fixed
+}
+
+.Whole2 {
+    width: 976px;
+    background: url("/static/images/back3.jpg")50% 0 fixed;
+    padding: 0px 50px 
+}
+
+.Header {
+    color: purple;
+    margin: 20px;
+    margin-left: 150px;
+}
+
+.Base {
+    margin-left: 240px;
+}
+
+.craft {
+    margin-left: 400px;
+}
+
+.Links {
+    margin-left: 145px;
+}
+
+.store{
+    margin-left: 50px;
+}
+
+.bowl_create{
+    margin-left: 350px;
+}
+
+.contact_info {
+    margin-left: 230px;
+}
+
+.Bottom {
+    margin: 100px;
+}
+
+.top_story {
+    margin: 10px;
+}
+
+.bottom_story {
+    margin: 10px;
+}
+
+.Trio {
+    display: flex;
+}
+
+.Row {
+    /*display: inline;*/
+}
+
+.btn {
+    border-radius: 20px;
+}
+
+.topping {
+    display: inline-flex;
+}

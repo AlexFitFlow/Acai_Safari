@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-color: black;">
+    <div class="Whole" style="margin: auto;">
+            <!-- Top Header -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="padding: 10px; width: 976px; margin-left: 12px;">
+                    <div class="d-flex justify-content-around">
+                        <a class="navbar-brand" href="#">
+                            <img src="{% static 'images/logo8.jpg' %}" style="border-radius: 5px;" width="170" height="40" class="d-inline-block align-top">
+                        </a>
+                        <a href="/order_page" style="margin: 10px;"><button class="btn btn-success" type="button">Order Now</button></a>
+                        <a href="/login_page" style="margin: 10px;"><button class="btn btn-success" type="button">Register/Login</button></a>
+                        <a href="/" style="margin: 10px;"><button class="btn btn-success" type="button">Main</button></a>
+                        <a href="/contact_page" style="margin: 10px;"><button class="btn btn-success" type="button">Contact Us</button></a>
+                    </div>
+            </nav><br><br>
+        <!-- Company and Acai Info -->
+        <img src="{% static 'images/farmer.jpg' %}" style="margin-left: 350px; border-radius: 90px;" width="300px" alt="Farmer"><br><br>
+        <p style="margin-left: 200px; width: 615px; font-family: comic sans MS;">Welcome to Acai Safari Cafe, where high quality bowls are our guarantee! Our origin begins in 2013 when we were a pop up Acai stand at many fitness
+            events mainly Brazilian Jiu-Jitus competitions. Our founder Marcelo Faria is a professional chef turned Acai enthusiast who decided to pursue his passion of 
+            serving health foods to the local community. The first official location opened shop in 2015 in Burbank, California in the Empire Center. Since the grand opening 
+            we have received numerous awards such as Yelps top picks as well as being featured in the LA Times.</p><br>
+
+        <img src="{% static 'images/Acai5.jpg' %}" style="margin-left: 300px; border-radius: 25px;" width="400px" alt="Acai"><br><br>
+        <p style="margin-left: 200px; width: 615px; font-family: comic sans MS;">Açaí (ah-sigh-EE) berries are 1-inch (2.5-cm) round fruits that 
+            grow on açaí palm trees in the rainforests of Central and South America. They have a dark purple skin and yellow flesh surrounding a large seed. The berry has various vitamins, antioxidants and
+            other health benefits. They have an earthy taste that’s often described as a cross between blackberries and unsweetened chocolate.</p>
+
+        <a href="/Acai_Safari/Acai_App/static/images/Acai_Farm.jpg.webp"></a><br>
+        <p style="margin-left: 440px; font-family: comic sans MS;"><b>In partnership with:</b></p>
+
+        <p><br><img src="{% static 'images/logo9.jpg' %}" style="margin-left: 420px; border-radius: 15px;" width="200px" alt="Vibe Connect"></p><br>
+        <!-- Bottom Header -->
+        <div class="Social_Media" style="margin-left: 440px;">
+            <p>
+            <a href="https://www.instagram.com"><img src="{% static 'images/instagram_logo.jpg' %}" style="border-radius: 20px;" width="50px" alt="instagram"></a>
+            <a href="https://www.facebook.com"><img src="{% static 'images/facebook_logo.jpg' %}" style="border-radius: 10px;" width="50px" alt="facebook"></a>
+            <a href="https://www.yelp.com"><img src="{% static 'images/yelp_logo.jpg' %}" width="50px" alt="yelp"></a>
+            </p>
+        </div><br>
+        <p style="margin-left: 450px; font-family: comic sans MS" >© Acai Safari 2022</p><br>
+    </div>
+</body>
+</html>

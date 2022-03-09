@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body style="background-color: black;">
+    <div class="Whole2" style="margin: auto;">
+        <!-- Top Header -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark" style="padding: 10px; width: 976px; margin-left: -50px;">
+                <div class="d-flex justify-content-around">
+                    <a href="/order_page" style="margin: 10px;"><button class="btn btn-success" type="button">Order Now</button></a>
+                    <a href="/login_page" style="margin: 10px;"><button class="btn btn-success" type="button">Register/Login</button></a>
+                    <a href="/story_page" style="margin: 10px;"><button class="btn btn-success" type="button">Our Story</button></a>
+                    <a href="/contact_page" style="margin: 10px;"><button class="btn btn-success" type="button">Contact Us</button></a>
+                </div>
+        </nav><br><br>
+
+        </a>
+
+        <img src="{% static 'images/logo5.jpg' %}"  style="width: 400px; margin-left: 230px; border-radius: 20px" alt="Logo"><br><br><br>
+
+        <div class="menu">
+            <img src="{% static 'images/Menu.jpg' %}" style="margin-left: 58px; border-radius: 25px;" width="751px" alt="Menu">
+        </div><br><br><br>
+
+        <div class="bowl">
+            <img src="{% static 'images/store.jpg' %}" style="border-radius: 15px; margin-left: 85px;" width="710px" alt="Acai Bowl">
+        </div><br><br>
+        <!-- Bottom Header -->
+        <div class="Social_Media" style="margin-left: 355px;">
+            <p>
+            <a href="https://www.instagram.com"><img src="{% static 'images/instagram_logo.jpg' %}" style="border-radius: 20px;" width="60px" alt="instagram"></a>
+            <a href="https://www.facebook.com"><img src="{% static 'images/facebook_logo.jpg' %}" style="border-radius: 10px;" width="60px" alt="facebook"></a>
+            <a href="https://www.yelp.com"><img src="{% static 'images/yelp_logo.jpg' %}" width="60px" alt="yelp"></a>
+            </p>
+        </div>
+        <p style="margin-left: 385px; font-family: comic sans MS">© Acai Safari 2022</p><br>
+    </div>
+</body>
+</html>
